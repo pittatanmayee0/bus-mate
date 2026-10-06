@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusMate - Live Demo & Video Showcase</title>
+  <style>
+    :root {
+      --bg-main: #f4f8fc;
+      --bg-surface: #ffffff;
+      --primary-navy: #0b192c;
+      --accent-blue: #0066ff;
+      --accent-light: #e6f0ff;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header Navigation */
+    header {
+      position: sticky; top: 0; background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); z-index: 1000;
+    }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; height: 72px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.35rem; color: var(--primary-navy); text-decoration: none; }
+    .logo-icon { width: 36px; height: 36px; background: var(--primary-navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; }
+    
+    .btn-secondary { background: var(--bg-surface); color: var(--primary-navy); border: 1.5px solid var(--primary-navy); padding: 10px 20px; border-radius: var(--radius-pill); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+    .btn-nav { background: var(--accent-blue); color: white; padding: 10px 20px; border-radius: var(--radius-pill); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+
+    /* Hero Banner */
+    .hero-banner { padding: 40px 0 24px; text-align: center; }
+    .hero-banner h1 { font-size: 2.5rem; color: var(--primary-navy); margin-bottom: 8px; }
+    .hero-banner p { font-size: 1.1rem; color: var(--text-muted); max-width: 650px; margin: 0 auto; }
+
+    /* Video Player Section */
+    .video-container {
+      background: #000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      margin-bottom: 36px;
+      border: 1px solid var(--border-color);
+    }
+    .video-container iframe, .video-container video {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;
+    }
+
+    /* Content Layout */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 36px; }
+    .card { background: var(--bg-surface); padding: 28px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); }
+    .card h3 { font-size: 1.2rem; color: var(--primary-navy); margin-bottom: 8px; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .detail-box { background: var(--bg-surface); border-radius: var(--radius-lg); padding: 36px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); margin-bottom: 40px; }
+    .detail-box h2 { color: var(--primary-navy); margin-bottom: 16px; font-size: 1.6rem; }
+    .detail-box ul { list-style: none; }
+    .detail-box ul li { padding: 8px 0; border-bottom: 1px solid var(--border-color); color: var(--text-dark); }
+    .detail-box ul li:last-child { border-bottom: none; }
+
+    /* Responsive adjustment */
+    @media (max-width: 768px) {
+      .grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🚌</div>
+        BusMate
+      </a>
+      <div>
+        <a href="index.html" class="btn-secondary">← Back to Home</a>
+        <a href="concept.html" class="btn-nav">Explore Concept</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <div class="hero-banner">
+      <h1>BusMate System Demo</h1>
+      <p>Watch how real-time GPS telemetry, geofence alerts, and automated driver check-ins come together in a live simulation.</p>
+    </div>
+
+    <!-- Video Player Container -->
+    <div class="video-container">
+      <video controls autoplay muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        <source src="C:\Users\USER\Downloads\Untitled design.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- Live Performance Metrics -->
+    <div class="grid-3">
+      <div class="card">
+        <h3>⚡ Real-Time Latency</h3>
+        <p>Location coordinates update every 3 seconds with less than 200ms network delay.</p>
+      </div>
+      <div class="card">
+        <h3>🎯 Geofence Accuracy</h3>
+        <p>Proximity alarms trigger precisely within a 500-meter radius of student stops.</p>
+      </div>
+      <div class="card">
+        <h3>📲 Push Reliability</h3>
+        <p>Instant notification delivery with 99.8% message arrival success rates.</p>
+      </div>
+    </div>
+
+    <!-- Video Breakdown & Highlights -->
+    <div class="detail-box">
+      <h2>What You Are Seeing In The Demo</h2>
+      <ul>
+        <li><strong>0:00 - 0:45:</strong> Driver logs into the mobile app and selects Route #12 to initiate GPS telemetry broadcast.</li>
+        <li><strong>0:45 - 1:30:</strong> Student mobile screen showing live vector tracking as the bus travels along the route corridor.</li>
+        <li><strong>1:30 - 2:10:</strong> Geofence trigger sending a 5-minute proximity alert directly to the student's phone.</li>
+        <li><strong>2:10 - 2:50:</strong> Student taps "Skip Pickup Today", immediately updating the driver's stop checklist without requiring phone calls.</li>
+        <li><strong>2:50 - 3:30:</strong> School Admin Dashboard live fleet monitor reflecting vehicle status, speed, and real-time route adherence.</li>
+      </ul>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 60px;">
+      <a href="index.html" class="btn-secondary">← Return to Landing Page</a>
+    </div>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusMate - Future Scope & AI Scope</title>
+  <style>
+    :root {
+      --bg-main: #f4f8fc;
+      --bg-surface: #ffffff;
+      --primary-navy: #0b192c;
+      --accent-blue: #0066ff;
+      --accent-light: #e6f0ff;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      --radius-lg: 16px;
+      --radius-pill: 9999px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg-main); color: var(--text-dark); line-height: 1.6; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      position: sticky; top: 0; background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); z-index: 1000;
+    }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; height: 72px; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.35rem; color: var(--primary-navy); text-decoration: none; }
+    .logo-icon { width: 36px; height: 36px; background: var(--primary-navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; }
+    
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem; }
+    .nav-links a.active { color: var(--accent-blue); font-weight: 700; }
+
+    .hero-banner { padding: 60px 0 40px; text-align: center; }
+    .hero-banner h1 { font-size: 2.8rem; color: var(--primary-navy); margin-bottom: 12px; }
+    .hero-banner p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 30px; }
+    
+    .card { background: var(--bg-surface); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); }
+    .card-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+    .card h3 { font-size: 1.3rem; color: var(--primary-navy); margin-bottom: 10px; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .banner-dark {
+      background: var(--primary-navy); color: white; border-radius: var(--radius-lg);
+      padding: 50px 40px; text-align: center; margin: 40px 0 80px;
+    }
+    .banner-dark h2 { font-size: 2rem; margin-bottom: 12px; }
+    .banner-dark p { color: #94a3b8; font-size: 1.1rem; margin-bottom: 24px; }
+
+    .btn-nav { background: var(--accent-blue); color: white; padding: 12px 24px; border-radius: var(--radius-pill); text-decoration: none; font-weight: 600; display: inline-block; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🚌</div>
+        BusMate
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="concept.html">Detailed Concept</a></li>
+        <li><a href="future.html" class="active">Future Scope & AI</a></li>
+      </ul>
+      <a href="index.html" class="btn-nav">Back to Main Page</a>
+    </div>
+  </header>
+
+  <div class="container hero-banner">
+    <h1>Making Every Journey Smarter</h1>
+    <p>Exploring next-generation artificial intelligence, dynamic route optimization, and sustainable fleet features.</p>
+  </div>
+
+  <main class="container">
+    
+    <div class="grid-2">
+      <div class="card">
+        <span class="card-icon">🧠</span>
+        <h3>AI-Powered Arrival Predictions</h3>
+        <p>Machine learning models that analyze historical weather trends, seasonal morning traffic jams, and drop-off delay statistics to refine ETA down to the exact second.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">⚡</span>
+        <h3>Dynamic Route Optimization</h3>
+        <p>Algorithms that automatically recalculate transit routes in real-time if multiple students mark themselves absent, eliminating up to 15 minutes of unnecessary driving per trip.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">🌿</span>
+        <h3>Carbon Footprint Analytics</h3>
+        <p>Environmental tracking engines that measure fuel usage, idle times, and reduced tailpipe emissions, helping institutions reach eco-friendly carbon neutrality targets.</p>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">💳</span>
+        <h3>Smart NFC / Contactless Boarding</h3>
+        <p>Integration with existing student ID badges using RFID or NFC cards, giving parents instant notifications the moment their child safely steps onto the vehicle.</p>
+      </div>
+    </div>
+
+    <!-- Final Linked Call to Action -->
+    <div class="banner-dark">
+      <h2>Ready to modernize student transit?</h2>
+      <p>BusMate combines real-time efficiency with ultimate peace of mind.</p>
+      <a href="index.html" class="btn-nav">Return to Landing Page</a>
+    </div>
+
+  </main>
+
+</body>
+</html>
